@@ -1,0 +1,40 @@
+; Existing Registers:
+
+; ACC (Accumulator) "Operational Output from Logic and Arithmetic"
+; B (General Purpose) "Cache"
+; CIN (Input A) "Operational Input A for Logic and Arithmetic"
+; DIN (Input B) "Operational Input B for Logic and Arithmetic"
+; OUT (Display Output) "Displays Register Value"
+
+; Existing Instructions:
+; FUNC (ARGUMENTS):
+
+; ADD "CIN and DIN Addition"
+; SUB "CIN and DIN Subtraction"
+; AND "CIN && DIN Logical Operation"
+; OR "CIN || DIN Logical Operation"
+; NOT (anyREGISTER) "Logical Operation"
+; JMP (lineADDRESS) "Jump to Line"
+; JZ (anyREGISTER, lineADDRESS) "Jump to Line if Value is 0"
+; JNZ (anyREGISTER, lineADDRESS) "Jump to Line if Value is not 0"
+; MOV (anyREGISTER. anyREGISTER) "Copy Value from Register A to Register B"
+; SET (anyREGISTER, value) "Set Register to Integer Value (HEX)"
+
+; Technical Information:
+
+; The .casm code must be a maximum of 8 lines long.
+; Values ​​must be less than the integer 16 (0xF)
+; The line address starts with the value 0x0 and goes up to max. 0xF
+
+; Set registers to value 
+SET B, 0x4
+SET DIN, 0xB
+
+; Move register B value to register CIN
+MOV B, CIN
+
+; Adding value from CIN with value from DIN (4 + 11)
+ADD
+
+; Move result from Accumulator to Output Display
+MOV ACC, OUT
